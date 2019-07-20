@@ -1,0 +1,12 @@
+function drop_ad(data) {
+	if (data.ads[0].description && data.ads[0].statlink) {
+		$('.bsa-apiads').html('<a href="'+data.ads[0].statlink+'" target="_blank">'+data.ads[0].description+'</a>');
+		if (data.ads[0].pixel) {
+			var time = Math.round(Date.now() / 10000) | 0;
+			var pixels = data.ads[0].pixel.split('||');
+			for (var j = 0; j < pixels.length; j++) {
+			$('.bsa-apiads').append('<img style="display:none" height=1 width=1 src="'+pixels[j].replace('[timestamp]',time)+'"/>');
+			}
+		}
+	}
+}

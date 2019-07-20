@@ -1,0 +1,15 @@
+#principal{  
+    position:relative;
+    margin:0 auto;
+    clear:left;
+    height:auto;
+    z-index: 0;
+    text-align:center;/* Add This*/
+    padding-top: 10px;
+}​
+
+
+#botones{
+	padding-top: 50%;	
+}
+
